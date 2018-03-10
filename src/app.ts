@@ -17,4 +17,4 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get("/", homeController.index);
 app.post("/test", homeController.test);
 
-export default app;
+module.exports = app;
