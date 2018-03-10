@@ -1,9 +1,10 @@
-import {App} from "./App";
+import app from "./app";
 import * as express from "express";
+import * as errorHandler from "errorhandler";
 
 const port: number = Number(process.env.PORT) || 3000;
-const app: express.Application = new App().app;
 
+app.use(errorHandler());
 
 exports = app.listen(port, () => {
     console.log(("  App is running at http://localhost:%d in"), port);
