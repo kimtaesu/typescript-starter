@@ -7,15 +7,5 @@ import {WriteError} from "mongodb";
  * Home page.
  */
 export let index = (req: Request, res: Response, next: NextFunction) => {
-    const book = new Book({
-        name: "NodeJS Tutorial",
-        author: "velopert"
-    });
-    book.save((err: WriteError) => {
-        if (err) {
-            console.log(`error ${err}`);
-        }
-        console.log(`saved ${err}`);
-    });
     res.send("Hellow");
 };
