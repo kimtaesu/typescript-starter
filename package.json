@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run tslint && npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node  src/index.ts",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node  src/**.*",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "keywords": [],
