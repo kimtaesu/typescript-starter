@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "npm run build-ts && npm run tslint && nodemon ./dist/server.js --watch \"./dist\"",
-    "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "build-ts": "tsc",
-    "watch-ts": "tsc -w"
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- src/server.ts"
   },
   "keywords": [],
   "author": "",
